@@ -1,0 +1,95 @@
+$button: rgba(148,186,101,0.7);
+
+.frame img {
+  max-height: 30px;
+}
+
+.bg {
+  span {
+    font-weight: bold;
+  }
+}
+
+.bg-red {
+  background-color: rgb(255, 134, 134);
+}
+
+.bg-grey {
+  background-color: rgb(202, 202, 202);
+}
+
+.frame {
+  width: 100%;
+}
+
+.col-7 {
+  padding: 5px;
+  margin: auto;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+button .bg {
+  background-color: $button;
+}
+
+.opacity {
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.opacity:focus {
+  outline: 0;
+}
+
+.d-flex button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.d-flex button .bg:hover {
+  background-color: rgba(125, 163, 79, 0.7);
+}
+
+.d-flex button .bg:focus {
+  background-color: rgba(108, 143, 66, 0.7);
+}
+
+.h-100vh {
+  background-color: red($color: #af0a0a);
+}
+
+.opacity {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.568);
+}
+
+form {
+  legend {
+    margin-left: 20px;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
+  input, button, label, select {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  #commentaire {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+  }
+}

@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 0, 0)
+}
+
+html {
+  height: 100vh;
+}
+
+$j: 10;
+
+@for $i from 1 through $j {
+  $width: percentage($i/$j);
+  .col-#{$i} {
+    width: $width;
+  }
+}
+
+p {
+  padding: 7.5px;
+}
+
+nav {
+  padding: 10px;
+}
+
+.d-flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.container {
+  min-width: 85%;
+  max-width: 85%;
+  width: 85%;
+  margin: auto;
+}

@@ -1,0 +1,29 @@
+<div *ngFor="let place of places" class="col-7">
+  <div [ngClass]="place.state == 'Private' ? 'bg-red' : 'bg-grey'" class="bg">
+      Discussion crée par <span>{{place.username}}</span><br>
+      (Sur le thème : <span>{{place.theme}}</span>)<br>
+      Dans le groupe <span>{{place.state}}</span><br><br>
+      « <span>{{place.message}}</span> »
+  </div>
+</div>
+<div class="col-7">
+  <div id="form">
+    <form (ngSubmit)="onCreate(createF)" #createF="ngForm">
+      <fieldset>
+        <legend>Ajouter un commentaire</legend>
+        <input id="username" name="username" type="text" placeholder="Nom d'utilisateur" #username="ngModel" ngModel required>
+        <select id="theme" name="theme" type="text"  #theme="ngModel" ngModel required>
+          <option>Activité Physique</option>
+          <option>Nutritions</option>
+          <option>Hygiène</option>
+        </select>
+        <input type="radio" id="public" name="state" value="Public" #state="ngModel" ngModel required>
+        <label for="public">Public</label>
+        <input type="radio" id="private" name="state" value="Private" #state="ngModel" ngModel required>
+        <label for="private">Private</label><br>
+        <textarea id="commentaire" name="message" type="text" placeholder="Commentaire..." #message="ngModel" ngModel required></textarea>
+        <button id="submit" [disabled]="!createF.valid">Poster</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
